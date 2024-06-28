@@ -4,6 +4,8 @@ import axios from 'axios';
 
 const MapComponent = ({ url }) => {
   const [shops, setShops] = useState([]);
+  const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+
 
   useEffect(() => {
     const fetchShops = async () => {
@@ -29,7 +31,7 @@ const MapComponent = ({ url }) => {
   };
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyAgqLtPqlg61xprLQN_jNByGms6RSOvJQc">
+    <LoadScript googleMapsApiKey={googleMapsApiKey}>
       <GoogleMap mapContainerStyle={mapContainerStyle} zoom={2} center={center}>
         {shops.map((shop) => (
           <Marker key={shop._id} position={{ lat: shop.location.lat, lng: shop.location.lng }} />

@@ -11,7 +11,7 @@ const ShopDisplay = ({ searchQuery = "" }) => {
     const fetchShops = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/coffee-shops/list"
+          `${import.meta.env.VITE_API_URL}/api/coffee-shops/list`
         );
         setShopList(response.data);
         setLoading(false);

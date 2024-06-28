@@ -30,7 +30,7 @@ const Navbar = ({ setShowLogin }) => {
         {!token ? (
           <button
             onClick={() => setShowLogin(true)}
-            className="bg-transparent text-lg text-white bg-[#06b6d4] border border-[#dbeafe] px-7 py-2.5 rounded-full cursor-pointer transition duration-300 hover:bg-[#0891b2]"
+            className="bg-transparent text-lg text-[#0891b2] hover:text-white bg-[#06b6d4] border border-[#dbeafe] px-7 py-2.5 rounded-full cursor-pointer transition duration-300 hover:bg-[#0891b2]"
           >
             sign in
           </button>

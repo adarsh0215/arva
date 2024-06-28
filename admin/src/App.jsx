@@ -9,7 +9,8 @@ import "react-toastify/dist/ReactToastify.css";
 import AddCoffeeShop from "./pages/Shop/AddShop";
 
 const App = () => {
-  const url = "http://localhost:5000";
+  const url = import.meta.env.VITE_API_URL;
+
 
   return (
     <div>
