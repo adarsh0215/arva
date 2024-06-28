@@ -12,7 +12,7 @@ import orderRouter from './routes/orderRoutes.js';
 import path from 'path';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { log } from 'console';
+
 
 
 dotenv.config();
@@ -46,6 +46,7 @@ console.log("dir", __dirname);
 // Serve static files from the React frontends
 app.use('/admin/', express.static(path.join(__dirname, '../admin/dist')));
 app.use('/', express.static(path.join(__dirname, '../client/dist')));
+
 
 // Serve index.html on unmatched routes
 app.get('/admin/*', (req, res) => {
